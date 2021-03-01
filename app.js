@@ -38,7 +38,7 @@ client.once("ready", () => {
     activity: {
       name: `${config.prefix}help in ${client.guilds.cache.size} servers`,
       type: "Watching",
-      url: discordURL,
+      url: https://discord.gg/mrsPFD4kpD,
     },
   });
 });
@@ -53,7 +53,7 @@ client.on("guildCreate", (guild) => {
     activity: {
       name: `${config.prefix}help in ${client.guilds.cache.size} servers`,
       type: "STREAMING",
-      url: twitchURL,
+      url: https://discord.gg/mrsPFD4kpD,
     },
   });
 });
@@ -147,7 +147,7 @@ client.on("message", async (message) => {
         .setTitle("ayo chill man")
         .setDescription(`${command.cd}\nWait for ${d.formatCooldown(timeLeft)}`)
         .setTimestamp()
-        .setFooter("Grape Cooldowns");
+        .setFooter("Minecraft Cooldowns");
       return message.channel.send(cool);
     }
   }
