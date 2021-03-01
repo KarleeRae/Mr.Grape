@@ -10,7 +10,7 @@ const users = new Keyv(process.env.DATABASE, { namespace: "users" });
 const items = new Keyv(process.env.DATABASE, { namespace: "items" });
 const guilds = new Keyv(process.env.DATABASE, { namespace: "guilds" });
 const cooldowns = new Discord.Collection();
-const twitchURL = "https://twitch.tv/MrGrapeTwitch";
+const discordURL = "https://discord.gg/mrsPFD4kpD";
 
 client.commands = new Discord.Collection();
 client.queue = new Discord.Collection();
@@ -37,8 +37,8 @@ client.once("ready", () => {
   client.user.setPresence({
     activity: {
       name: `${config.prefix}help in ${client.guilds.cache.size} servers`,
-      type: "STREAMING",
-      url: twitchURL,
+      type: "Watching",
+      url: discordURL,
     },
   });
 });
@@ -62,15 +62,15 @@ client.on("guildDelete", async (guild) => {
   client.user.setPresence({
     activity: {
       name: `${config.prefix}help in ${client.guilds.cache.size} servers`,
-      type: "STREAMING",
-      url: "https://www.twitch.tv/MrGrapeTwitch",
+      type: "Watching",
+      url: "https://discord.gg/mrsPFD4kpD",
     },
   });
   await guilds.delete(guild.id);
 });
 
 client.on("message", async (message) => {  
-  let prefix = "+";
+  let prefix = "!";
   // let guild = await guilds.get(message.guild.id);
   // if (!guild || !guild.prefix) {
   //   prefix = config.prefix;
