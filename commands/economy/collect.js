@@ -3,7 +3,7 @@
     aliases: ['col'],	
     description: 'collect the stars from your starmill!',	
     cd: "Ya gotta wait for the stars to generate (hey that rhymed!)",	
-    cooldown: 600,	
+    cooldown: 500,	
     async execute(message, args, d) {	
         let inv = await d.items.get(message.author.id);	
         let collectedStars;	
@@ -26,9 +26,9 @@
             .setColor('#dd2de0')	
             .setTitle(message.author.username + `'s collection of stars`)	
             .addField('Collected', collectedStars + " :star:s")	
-            .setThumbnail('https://i.imgur.com/JXfpgdXh.jpg')	
+            .setThumbnail('https://www.google.com/search?q=animated+bug&rlz=1CABJUN_enUS942&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjKl-TY5I3vAhWrFzQIHfNkDXMQ_AUoAXoECBIQAw&biw=1366&bih=609&safe=active&ssui=on#imgrc=RqWjLI1hKgFD6M')	
             .setTimestamp()	
-            .setFooter('Grape Bank Inc.');	
+            .setFooter('Buggi Bank Inc.');	
         message.channel.send(colEmbed);	
 
     }	
